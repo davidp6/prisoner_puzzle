@@ -17,10 +17,12 @@
 # ---------------------------------------------------------------------------------------------------------------------------
 # Define function
 sampleBoxes = function(boxes) {
-	# loop over prisoners and make each of them select 50 random boxes
+	# loop over prisoners and make each of them select 50 boxes
 	sample = NULL
 	for(p in seq(nPrisoners)) {
+		# even-numbered prisoners will select the first 50 boxes
 		if (p/2==floor(p/2)) currentSample = seq(sampleSize)
+		# odd-numbered prisoners will select the last 50 boxes
 		else currentSample = (sampleSize+1):nPrisoners
 		sample = rbind(sample, currentSample)
 	}
