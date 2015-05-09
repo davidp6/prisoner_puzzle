@@ -20,6 +20,10 @@
 # Define function
 SimulateSampling = function(N=10, SampleStrategy='Random') {
 
+	# print for user
+	print(paste('Number of iterations:', N))
+	print(paste('Sampling strategy:', SampleStrategy))
+
 	# load box sampling strategy
 	source(paste0('./', SampleStrategy, '.r'))
 

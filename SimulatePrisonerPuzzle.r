@@ -42,7 +42,7 @@ source('./SimulateSampling.r')
 # Execute simulation
 
 # random sampling
-RandomSimulation = SimulateSampling(N=1000, SampleStrategy='Random')
+# RandomSimulation = SimulateSampling(N=1000, SampleStrategy='Random')
 
 # FirstHalfLastHalf sampling
 RandomSimulation = SimulateSampling(N=1000, SampleStrategy='FirstHalfLastHalf')
