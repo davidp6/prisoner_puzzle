@@ -43,6 +43,9 @@ source('./SimulateSampling.r')
 
 # random sampling
 RandomSimulation = SimulateSampling(N=1000, SampleStrategy='Random')
+
+# FirstHalfLastHalf sampling
+RandomSimulation = SimulateSampling(N=1000, SampleStrategy='FirstHalfLastHalf')
 print(paste('Probability of success:', RandomSimulation$p))
 
 # ---------------------------------------------------------------------------------------------------------------------------
