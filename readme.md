@@ -14,3 +14,7 @@
 ## SimulateSampling.r			: function that executes multiple iterations of a given sampling strategy
 ## Random.r						: function that implements a completely random sampling strategy
 -----
+
+# Approach:
+## Write different scripts in the style of Random.r that test out other strategies that the prisoners might take. See if they work.
+-----
