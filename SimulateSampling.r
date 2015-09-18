@@ -40,14 +40,14 @@ SimulateSampling = function(N=10, SampleStrategy='Random') {
 		sample = sampleBoxes(boxes)
 		
 		# check whether each prisoner drew his/her name
-		drewSelf = lapply(seq(nPrisoners), function(p) { boxes[p] %in% sample[p,] })
-		drewSelf = do.call(rbind, drewSelf)
+		drewSelf = sapply(seq(nPrisoners), function(p) {p %in% sample[p,] })
 		
 		# check whether this trial was a success (everyone draw themself)
-		success = mean(drewSelf)
-		return(success==1)
+		success = all(drewSelf)
+		return(success)
 	})
 	successes = do.call(rbind, successes)
+	cat('\n')
 	
 	# return outputs
 	return(list(p=mean(successes), successes=successes))

@@ -45,7 +45,10 @@ source('./SimulateSampling.r')
 # RandomSimulation = SimulateSampling(N=1000, SampleStrategy='Random')
 
 # FirstHalfLastHalf sampling
-RandomSimulation = SimulateSampling(N=1000, SampleStrategy='FirstHalfLastHalf')
-print(paste('Probability of success:', RandomSimulation$p))
+# RandomSimulation = SimulateSampling(N=1000, SampleStrategy='FirstHalfLastHalf')
+# print(paste('Probability of success:', RandomSimulation$p))
 
+# Permutation cycling
+PermutationCyclingSimulation = SimulateSampling(N=1000, SampleStrategy='PermutationCycling')
+print(paste('Probability of success:', PermutationCyclingSimulation$p))
 # ---------------------------------------------------------------------------------------------------------------------------
